@@ -1,7 +1,0 @@
-[project]
-  name = "hccvn-hp"
-  
-[build]
-  # Disable buildpack detection
-  builder = ""
-
