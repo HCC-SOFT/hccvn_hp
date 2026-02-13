@@ -122,6 +122,8 @@ h2.section-title, h2 {
     background: #999; /* Màu xám theo hình mẫu */
     color: var(--white);
     padding: 12px 25px;
+    min-width: 130px;
+    justify-content: center;
     text-decoration: none;
     font-size: 0.9rem;
     display: flex;
@@ -138,7 +140,7 @@ h2.section-title, h2 {
 
 .nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     list-style: none;
     padding: 0;
 }
@@ -152,7 +154,9 @@ h2.section-title, h2 {
     color: var(--footer-bg);
     font-size: 0.85rem;
     font-weight: 500;
-    padding: 12px 20px;
+    padding: 12px 25px;
+    min-width: 130px;
+    text-align: center;
     display: block;
     transition: all 0.3s ease;
 }
@@ -453,6 +457,139 @@ h2.section-title, h2 {
     box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
 }
 
+/* Policy / Personal info page */
+.content-section.policy-page {
+    padding: 50px 0 70px;
+}
+
+.policy-page .policy-intro {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.policy-page .policy-intro-ja {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.policy-section {
+    margin-bottom: 55px;
+}
+
+.policy-section:last-child {
+    margin-bottom: 0;
+}
+
+.policy-section-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.policy-section-head .section-title {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.policy-section-tag {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.policy-section-tag::before,
+.policy-section-tag::after {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
+.policy-page .section-title {
+    font-size: 1.5rem;
+    color: var(--dark-green);
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.policy-lead {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 14px;
+    color: #333;
+}
+
+.policy-lang-block {
+    margin-top: 28px;
+    padding: 24px 0;
+    border-top: 1px solid #e8e8e8;
+}
+
+.policy-lang-block:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.policy-lang-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.policy-lang-block .policy-lang-label {
+    color: var(--dark-green);
+}
+
+.policy-lang-block.vn-text .policy-lang-label {
+    color: var(--primary-color);
+}
+
+.policy-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.policy-list dt {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2a2a2a;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+.policy-list dt:first-child {
+    margin-top: 0;
+}
+
+.policy-list dd {
+    margin: 0 0 0 0;
+    padding: 0 0 12px 0;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #444;
+}
+
+.policy-lang-block.vn-text .policy-list dt,
+.policy-lang-block.vn-text .policy-list dd {
+    color: inherit;
+}
+
 /* Footer */
 .footer {
     width: 100%;
@@ -465,7 +602,7 @@ h2.section-title, h2 {
 }
 
 .footer-nav {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .footer-nav ul {
@@ -500,12 +637,20 @@ h2.section-title, h2 {
 .footer-logo {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
 }
 
 .footer-logo img {
     height: 40px;
     width: auto;
+}
+
+.footer-logo-suffix {
+    margin-left: 8px;
+    font-size: 1.75rem;
+    font-weight: 600;
+    font-style: italic;
+    white-space: nowrap;
 }
 
 .footer-address {
